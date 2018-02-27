@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.gatech.cs2340.wheresmystuff.controllers.RegistrationActivity">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="510dp"
+        android:background="@drawable/login_screen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <EditText
+            android:id="@+id/edtxt_userID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/edtxt_password"
+            android:layout_alignStart="@+id/edtxt_password"
+            android:layout_marginBottom="13dp"
+            android:background="#FFFFFF"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:text="User ID"
+            android:textColor="#969696" />
+
+        <EditText
+            android:id="@+id/edtxt_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/edtxt_email"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:background="#FFFFFF"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="#969696" />
+
+        <EditText
+            android:id="@+id/edtxt_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bt_submit"
+            android:layout_alignStart="@+id/edtxt_password"
+            android:layout_marginBottom="146dp"
+            android:background="#FFFFFF"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColor="#969696" />
+
+        <Spinner
+            android:id="@+id/spinner_acountType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bt_submit"
+            android:layout_alignEnd="@+id/edtxt_email"
+            android:layout_alignStart="@+id/edtxt_email"
+            android:layout_marginBottom="71dp"
+            android:background="#FFFFFF"
+            android:hint="User Type"
+            android:padding="20dp" />
+
+        <Button
+            android:id="@+id/bt_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:onClick="onSubmitPressed"
+            android:text="submit"
+            android:textColor="#000000"
+            android:layout_alignBaseline="@+id/bt_cancel"
+            android:layout_alignBottom="@+id/bt_cancel"
+            android:layout_alignStart="@+id/spinner_acountType" />
+
+        <Button
+            android:id="@+id/bt_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="45dp"
+            android:background="#db4d40"
+            android:onClick="onCancelPressed"
+            android:text="Cancel"
+            android:textColor="#FFFFFF"
+            android:layout_alignParentBottom="true"
+            android:layout_alignEnd="@+id/spinner_acountType" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/spinner_acountType"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="11dp"
+            android:text="User Type" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

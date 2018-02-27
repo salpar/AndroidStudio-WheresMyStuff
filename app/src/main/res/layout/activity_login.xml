@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.gatech.cs2340.wheresmystuff.controllers.LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="515dp"
+        android:background="@drawable/login_screen"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="-29dp">
+
+        <EditText
+            android:id="@+id/edtxt_userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:hint="Username"
+            android:layout_marginBottom="16dp"
+            android:layout_above="@+id/edtxt_password"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:id="@+id/edtxt_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:hint="Password"
+            android:layout_marginBottom="57dp"
+            android:layout_above="@+id/bt_login"
+            android:layout_alignStart="@+id/edtxt_userName" />
+
+        <Button
+            android:id="@+id/bt_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:padding="10dp"
+            android:background="#db4d40"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="118dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

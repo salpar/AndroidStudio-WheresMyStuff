@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.gatech.cs2340.wheresmystuff.controllers.AddItemActivity">
+
+    <RelativeLayout
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp"
+        android:id="@+id/relativeLayout" />
+
+
+    <EditText
+        android:id="@+id/edtxt_lostItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_below="@+id/textView3"
+        android:ems="10"
+        android:inputType="text|textPersonName"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="33dp" />
+
+    <EditText
+        android:id="@+id/edtxt_lostItemDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_below="@+id/textView4"
+        android:ems="10"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="314dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter the name of your item"
+            tools:layout_editor_absoluteY="100dp"
+            tools:layout_editor_absoluteX="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_below="@+id/spinner_List"
+            android:layout_alignStart="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter a description of your item"
+            tools:layout_editor_absoluteY="90dp"
+            tools:layout_editor_absoluteX="16dp"
+            android:layout_marginTop="21dp"
+            android:layout_below="@+id/edtxt_lostItemName"
+            android:layout_alignStart="@+id/edtxt_lostItemName" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select item type"
+            tools:layout_editor_absoluteY="164dp"
+            tools:layout_editor_absoluteX="16dp"
+            android:layout_below="@+id/edtxt_lostItemDescription"
+            android:layout_alignStart="@+id/spinner_itemType"
+            android:layout_marginTop="21dp" />
+
+        <Spinner
+            android:id="@+id/spinner_itemType"
+            android:layout_width="344dp"
+            android:layout_height="18dp"
+            tools:layout_editor_absoluteY="181dp"
+            tools:layout_editor_absoluteX="16dp"
+            android:layout_below="@+id/textView6"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/bt_submitItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onSubmitItemPressed"
+            android:text="submit"
+            tools:layout_editor_absoluteY="447dp"
+            tools:layout_editor_absoluteX="74dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignEnd="@+id/textView3"
+            android:layout_marginEnd="34dp"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/bt_cancelItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onCancelItemPressed"
+            android:text="Cancel"
+            tools:layout_editor_absoluteY="447dp"
+            tools:layout_editor_absoluteX="227dp"
+            android:layout_alignBaseline="@+id/bt_submitItem"
+            android:layout_alignBottom="@+id/bt_submitItem"
+            android:layout_toEndOf="@+id/edtxt_lostItemReward" />
+
+        <Button
+            android:id="@+id/bt_selectDate"
+            style="@android:style/Widget.DeviceDefault.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/edtxt_lostItemDescription"
+            android:layout_below="@+id/spinner_itemType"
+            android:layout_alignStart="@+id/spinner_itemType"
+            android:layout_centerVertical="true"
+            android:text="Select Date Found"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="231dp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter the place your item was lost"
+            tools:layout_editor_absoluteY="297dp"
+            tools:layout_editor_absoluteX="16dp"
+            android:layout_above="@+id/edtxt_lostItemLocation"
+            android:layout_alignStart="@+id/bt_selectDate" />
+
+        <EditText
+            android:id="@+id/edtxt_lostItemLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteY="107dp"
+            tools:layout_editor_absoluteX="16dp"
+            android:layout_marginBottom="18dp"
+            android:layout_above="@+id/textView8"
+            android:layout_alignEnd="@+id/textView7" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter a reward for your item"
+            tools:layout_editor_absoluteY="379dp"
+            tools:layout_editor_absoluteX="16dp"
+            android:layout_above="@+id/edtxt_lostItemReward"
+            android:layout_alignStart="@+id/edtxt_lostItemLocation" />
+
+        <EditText
+            android:id="@+id/edtxt_lostItemReward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            tools:layout_editor_absoluteY="396dp"
+            tools:layout_editor_absoluteX="16dp"
+            android:layout_marginBottom="18dp"
+            android:layout_above="@+id/bt_submitItem"
+            android:layout_alignStart="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_below="@+id/relativeLayout"
+        tools:layout_editor_absoluteY="16dp"
+        tools:layout_editor_absoluteX="16dp"
+        android:text="Select the list to add your item to"
+        android:layout_alignEnd="@+id/edtxt_lostItemName" />
+
+    <Spinner
+        android:id="@+id/spinner_List"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_below="@+id/textView9" />
+
+</RelativeLayout>

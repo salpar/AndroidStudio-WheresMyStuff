@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/bt_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginEnd="26dp"
+            android:onClick="onLogoutPressed"
+            android:text="Log Out" />
+
+        <Button
+            android:id="@+id/bt_viewLostItems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bt_viewFoundItems"
+            android:layout_marginTop="20dp"
+            android:layout_toStartOf="@+id/bt_logout"
+            android:onClick="onViewLostItemsPressed"
+            android:text="View Lost Items" />
+
+        <Button
+            android:id="@+id/bt_viewFoundItems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bt_addLostItem"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="17dp"
+            android:onClick="onViewFoundItemsPressed"
+            android:text="View Found Items" />
+
+
+        <Button
+            android:id="@+id/bt_addLostItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="52dp"
+            android:onClick="onAddItemPressed"
+            android:text="Add Item" />
+
+        <Button
+            android:id="@+id/bt_viewMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bt_viewLostItems"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:onClick="onMapViewPressed"
+            android:text="View Map" />
+
+        <EditText
+            android:id="@+id/edtxt_searchLost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/bt_addLostItem"
+            android:layout_below="@+id/bt_viewMap"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="13dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Search Lost Items" />
+
+        <Button
+            android:id="@+id/bt_searchLost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/edtxt_searchLost"
+            android:layout_toEndOf="@+id/bt_viewFoundItems"
+            android:onClick="onSearchLostPressed"
+            android:text="Search" />
+
+        <EditText
+            android:id="@+id/edtxt_searchFound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/edtxt_searchLost"
+            android:layout_below="@+id/bt_searchLost"
+            android:layout_marginTop="14dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Search Found Items" />
+
+        <Button
+            android:id="@+id/bt_searchFound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/edtxt_searchFound"
+            android:layout_alignStart="@+id/bt_searchLost"
+            android:onClick="onSearchFoundPressed"
+            android:text="Search" />
+
+        <Button
+            android:id="@+id/bt_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/bt_logout"
+            android:layout_alignBottom="@+id/bt_logout"
+            android:layout_alignEnd="@+id/bt_viewMap"
+            android:onClick="onSavePressed"
+            android:text="Save" />
+    </RelativeLayout>
+</LinearLayout>
